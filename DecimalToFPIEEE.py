@@ -9,18 +9,23 @@ def float_splitter(f):
 def convert_post_dot_to_bin(f):
     print("")
     binary_string = ""
-    after_dot = float("0." + str(float_splitter(f)[1]))
-    print("The fractional part of the number is: " + str(after_dot))
+    deci_fract = float("0." + str(float_splitter(f)[1]))
+    after_dot = float_splitter(f)[1]
+    before_dot = float_splitter(f)[0]
+    print("The fractional part of the number is: " + str(deci_fract))
     print("converting this to binary: ")
+    print(before_dot, after_dot)
     while after_dot != 0:
-        calc = after_dot * 2
-        # split the outcome of after_dot*2
+        calc = deci_fract * 2
+        # split the outcome of deci_fract*2
         split_float = float_splitter(calc)
         # add first half of binary to binary list
         binary_string += str(split_float[0])
-        print(str(after_dot) + "x 2 = " + str(calc) + "      int remainder = " + str(split_float[0]))
+        before_dot = int(split_float[0])
+        print(str(deci_fract) + "x 2 = " + str(calc) + "      int remainder = " + str(split_float[0]))
         # make after dot post-dot part of new calc
-        after_dot = float("0." + str(float_splitter(calc)[1]))
+        deci_fract = float("0." + str(float_splitter(calc)[1]))
+        after_dot = float_splitter(calc)[1]
     return binary_string + "0"
 
 
@@ -107,3 +112,4 @@ def main():
 
 
 main()
+
