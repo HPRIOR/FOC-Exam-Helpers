@@ -25,6 +25,7 @@ def convert_post_dot_to_bin(f):
         # make after dot post-dot part of new calc
         deci_fract = float("0." + str(float_splitter(calc)[1]))
         after_dot = float_splitter(calc)[1]
+    print("0." + str(float_splitter(f)[1]) + " is 0." + binary_string + "0" + " in binary")
     return binary_string + "0"
 
 
@@ -65,7 +66,7 @@ def calculate_exponent(s):
     print("Therefore:")
     print("Mantisa = " + mantisa)
     print(" ")
-    print("Exponent = " + str(exp))
+    print("Exponent = " + str(exp) + " (the movement of the decimal place)")
     print("Add the bias to the exponent: ")
     exp_to_bin = exp + 127
     print(str(exp) + " + 127 = " + str(exp_to_bin))
