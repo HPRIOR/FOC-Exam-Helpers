@@ -61,4 +61,4 @@ def convert(s):
     print(pow(-1, sign) * (1 + mant) * pow(2, exp))
 
 
-convert("1100 0001 0101 1101 0000 0000 0000 0000")
+convert("1100 0001 1011 0000 0000 0000 0000 0000")

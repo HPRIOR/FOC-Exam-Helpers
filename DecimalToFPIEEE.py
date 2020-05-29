@@ -14,7 +14,6 @@ def convert_post_dot_to_bin(f):
     before_dot = float_splitter(f)[0]
     print("The fractional part of the number is: " + str(deci_fract))
     print("converting this to binary: ")
-    print(before_dot, after_dot)
     while after_dot != 0:
         calc = deci_fract * 2
         # split the outcome of deci_fract*2
